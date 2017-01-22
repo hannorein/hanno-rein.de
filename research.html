@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Hanno Rein">
+
+    <title>Professor Hanno Rein - University of Toronto at Scarborough - Research</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/jumbotron.css" rel="stylesheet">
+
+
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Hanno Rein</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="./">Home</a>
+                    </li>
+                    <li>
+                        <a href="#signup">Research</a>
+                    </li>
+                    <li>
+                        <a href="#webcam">Teaching</a>
+                    </li>
+                    <li>
+                        <a href="#tumblr">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Research</h1>
+        <p>This is an overview of the research I'm interested in.  </p>
+      </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-responsive" src="img/rebound.jpg" alt="">
+                Snapshot of REBOUND simulation of Saturn's Rings.
+            </div>
+            <div class="col-md-8">
+                <h2>REBOUND code</h2>
+
+                <p>
+                There are many N-body code available. But REBOUND is different. REBOUND is built around a few core principles:
+                <ul>
+                    <li><b>Open Source.</b> REBOUND is open source and will always be. Furthermore, all development is done in the open too. There are no secret development branches only available to colloaborators. Secrets and science don't go well together.</li>
+                    <li><b>Easy to use.</b> The python interface to REBOUND allows you to access all the features of REBOUND with minimal effort. Setting up a simulation often takes only a few lines of code. Built-in interactive visualization modules let you monitor the simulations in real-time.</li>
+                    <li><b>Accuracy.</b> The integrators that come with RBEOUND, WHFast and IAS15 are among the world's most accurate integrators for long-term N-body simulations.</li>
+                    <li><b>Speed.</b> Many of the core routines in REBOUND have been heavily optimized.</li> 
+                </ul>
+                </p>
+                <p>
+                In summer 2011, Shang-Fei Liu and I started to write REBOUND during the ISIMA summer school. It is a highly modular code that can handle a variety of problems such as long term orbit integrations, planetary rings and even debris disks. We use a set of highly efficient numerical algorithms and integrators. For example, the <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2966.2011.18939.x/abstract">Symplectic Epicyclic Integrator (SEI)</a> that I developed together with Scott Tremaine, is ideally suited for studying ring dynamics. The Wisdom-Holman integrator, on the other hand is well suited for studies of the Solar System. The self-gravity between particles can be calculated using a distributed tree, an FFT method or even a GRAPE. The collision detection makes use of a tree code and a very efficient plane-sweep algorithm.
+                </p>
+
+                <p>
+                In recent years REBOUND has become a community project with many collaboratos.
+                Most notably <a href="http://www.dantamayo.com">Dan Tamayo</a> and <a href="http://www.davespiegel.com">Dave Spiegel</a>.
+                Many of my students have also contributed to REBOUND.
+                The code is still being actively developed. 
+                Check out its <a href="https://github.com/hannorein/rebound">github page</a> to see what is new.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding:20px;"> </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-responsive" src="img/planet9.jpg" alt="">
+                Planet 9 and Kuiper Belt objects (Caltech/R. Hurt/WorldWide Telescope)
+            </div>
+            <div class="col-md-8">
+                <h2>Numerical integrators</h2>
+                <p>Numerical integrators are algorithms that can be used to solve equations of motions. These are differential equations which can be hard to solve both accurately and fast. I've developed several numerical integrators that can be used for systems which interact gravitationally such as planets, moons or particles in Saturn's rings. All of these integrators are part of the REBOUND package.</p>
+                <h3>IAS15</h3>
+                <p> <a href="https://arxiv.org/abs/1409.4779">IAS15</a> is a 15th-order integrator specifically tuned for gravitational dynamics. The integrator is based on the well known Gauss-Radau quadrature first used by <a href="http://link.springer.com/chapter/10.1007%2F978-94-009-5400-7_17#page-1">Everhardt</a>. Our implementation has been significantly optimized and can handle conservative as well as non-conservative forces. It comes with automatic step-size control to choose an optimal timestep. The algorithm can handle close encounters and high-eccentricity orbits. The systematic errors are kept well below machine precision and long-term orbit integrations over a billion orbits show that IAS15 is optimal in the sense that it follows Brouwer's law, i.e. the energy error behaves like a random walk. Our tests show that IAS15 is superior to a mixed-variable symplectic integrator (MVS) and other popular integrators, including high-order ones, in both speed and accuracy. In fact, IAS15 preserves the symplecticity of Hamiltonian systems better than the commonly-used nominally symplectic integrators to which we compared it. 
+                </p>
+                <h3>WHFast</h3>
+                <p> <a href="https://arxiv.org/abs/1506.01084">WHFast</a> is a fast and accurate implementation of a Wisdom-Holman symplectic integrator for long-term orbit integrations of planetary systems. WHFast is significantly faster and conserves energy better than all other Wisdom-Holman integrators tested. We achieve this by significantly improving the Kepler-solver and ensuring numerical stability of coordinate transformations to and from Jacobi coordinates. These refinements allow us to remove the linear secular trend in the energy error that is present in other implementations. For small enough timesteps we achieve Brouwer's law, i.e. the energy error is dominated by an unbiased random walk due to floating-point round-off errors. We implement symplectic correctors up to order eleven that significantly reduce the energy error. We also implement a symplectic tangent map for the variational equations. This allows us to efficiently calculate two widely used chaos indicators the Lyapunov characteristic number (LCN) and the Mean Exponential Growth factor of Nearby Orbits (MEGNO). 
+                </p>
+                <h3>SEI</h3>
+                <p> The shearing sheet is a model dynamical system that is used to study the small-scale dynamics of astrophysical disks. Numerical simulations of particle trajectories in the shearing sheet usually employ the leapfrog integrator, but this integrator performs poorly because of velocity-dependent (Coriolis) forces. <a href="https://arxiv.org/abs/1103.1376">SEI</a> is a new integrators for this purpose; it is symplectic, time-reversible and second-order accurate, and can easily be generalized to higher orders. Moreover, the integrator is exact when there are no small-scale forces such as mutual gravitational forces between disk particles. In numerical experiments these integrators have errors that are often several orders of magnitude smaller than competing methods. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding:20px;"> </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-responsive" src="img/kepler11.jpg" alt="">
+                Artist's conception of Kepler-11 (NASA/Tim Pyle)
+            </div>
+            <div class="col-md-8">
+                <h2>Formation of planetary systems</h2>
+
+                <p>
+                The Kepler spacecraft has discovered thousands of planet candidates. Within that sample, there are many multi-planetary systems. These are especially interesting because they can constrain planet formation scenarios. The red curve in the following plot shows the cumulative period ratio distribution in all observed multi-planetary systems.
+                </p>
+                <p>
+                One can see structures at a several integer ratios such as 2:1. These locations are mean motion resonances. For example, if a system is in an exact 2:1 resonance, then one planet orbits the stars exactly twice as often as the other. The same features <a href="http://arxiv.org/abs/1204.0974">have been found</a> in systems discovered by radial velocity.
+                </p>
+                <p>
+                The origin of this structure is planetary migration. As planets form, they interact with the proto-planetary disk and exchange angular momentum. The planets then start to move around and can capture into resonances with other planets. However, this is only part of the story. Because most of the planets in the Kepler sample are very small (sub-Jupiter mass), they are especially sensitive to random fluctuations in the proto-planetary disk. These fluctuations are for example created by the magneto rotational instability (MRI). They make the planet undergo a random walk. Thus, there is a competition between convergent migration pushing planets into resonance and the random walk moving them away from the exact resonance.
+                </p>
+                <p>
+                <a href="http://arxiv.org/abs/1208.3583">I simulated</a> all discovered Kepler systems, including migration forces. By taking canonical values for both the smooth and stochastic component, the final period ratio distribution (dashed curve in the figure) looks surprisingly similar to the observed distribution. The results shows that planetary migration and not tides are responsible for shaping the architecture of most planetary systems. In the future, we will be able to constrain migration even more, by comparing planets of different location and size.
+                </p>
+
+
+               <p>
+               Mean motion resonances (MMR) are common among extra-solar planets. The best example is the Laplace 4:2:1 resonance in the GJ876 system. These systems are generally taken as strong evidence that planet migration exists.
+               </p>
+               <p>
+
+               The system HD200964 is also in a mean motion resonance, more precisely a 4:3 MMR. And this leads to a problem. Because HD200964 consists of planets that are very massive, the systems should have captured into the 2:1 resonance during migration. In a study with Matthew Payne, Dimitri Veras and Eric Ford, we found that it is practically impossible to form this system by any means!
+               </p>
+               <p>
+               The above plot shows why. The 4:3 MMR is the small stable island (dark) on the top left of the stability plot. Assuming that the planets form apart from each other (and that is a reasonable assumption!), there is no way to get to the stable island without passing through some unstable region (white). During that phase, the planets scatter of each other and the system is destroyed.
+               </p>
+               <p>
+
+               This is a somewhat unsatisfying result because this planetary system should not exist! And it's not the only one. There are several (unpublished) systems that look exactly the same. This is exactly how science should be: intriguing.
+               </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" style="padding:20px;"> </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-responsive" src="img/moonlet.jpg" alt="">
+                A (very big) moonlet inside Saturn's rings (NASA/JPL/SSI)
+            </div>
+            <div class="col-md-8">
+                <h2>Stochastic migration of moonlets in Saturn's rings </h2>
+
+                <p>
+                As the name suggests, moonlets are small moons. In fact they are so small that they are embeped in Saturn's rings, not being massive enough to open a complete gap. Many of these objects have been observed by the Cassini Spacecraft. The following picture shows several of them.
+                </p>
+                <p>
+                Interestingly, these moonlets don't have fixed Keplerian orbits. They move around through interactions with the rings. Proto-planets experience a very similar effect soon after they form. They also interact with a disk (the proto-planetary disk) and begin to move. That is called planetary migration.
+
+
+                </p>
+                <p>
+                During my PhD I studied both planetary migration and the migration of moonlets. In both cases, stochastic migration will be important, especially for small mass bodies. John Papaloizou and I have shown that the stochasticty in Saturn's are generated by the finite size of ring particles and the interaction with gravitational wakes. But only recently, in a collaboration with Margaret Pan, we were able to prove that the observed motion is indeed compatible with such a random walk.
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding:20px;"> </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright text-muted small">Copyright &copy; Hanno Rein 2017. All content released under the <a href="https://creativecommons.org/licenses/by-sa/2.5/ca/">Attribution-ShareAlike 2.5 Canada license</a>. Design by Blackrock Digital LLC. Code released under the MIT license.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
