@@ -153,3 +153,10 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+dd {
+    padding-left: 15px;
+}
+dt {
+    font-weight: 500;
+}
