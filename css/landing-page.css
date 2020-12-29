@@ -44,6 +44,10 @@ html {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 5em;
 }
+.intro-message > h3 > a {
+	color: white;
+	text-decoration: underline;
+}
 
 .intro-divider {
     width: 400px;
@@ -110,7 +114,7 @@ html {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: url(https://rein.utsc.utoronto.ca/img/banner-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
