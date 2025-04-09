@@ -1,4 +1,5 @@
 import rebound
+rebound.horizons.SSL_CONTEXT = 'unverified'
 import matplotlib.patheffects as pe
 from datetime import date
 sim = rebound.Simulation()
