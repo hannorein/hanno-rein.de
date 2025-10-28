@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 
 // Check for required fields: student number, project name, and file
 if (empty($_POST["student_number"]) || empty($_POST["project_name"]) || empty($_FILES["uploaded_file"]["name"])) {
-    die("All fields are required.");
+    die("Upload failed. Make sure the filesize is less than 10MB.");
 }
 
 // Sanitize the student number to ensure it's a valid integer
